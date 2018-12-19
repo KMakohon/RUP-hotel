@@ -46,7 +46,7 @@
 | -------- | -------------------------------------------------------------------------- |
 | Opis     | Osoba oddelegowana przez zleceniodawcę do kontaktów z zespołem projektowym |
 | Typ      | osobowy                                                                    |
-| Kontakt  | Rafał Witkowski<br/>+48 404 404 404<br/>email: rmiw@amu.edu.pl             |
+| Kontakt  | Rafał Witkowski<br/>email: rmiw@amu.edu.pl                                 |
 
 ## Cele systemu
 
@@ -104,15 +104,17 @@
 | Potrzeby  | Struktura umożliwiająca sprawdzanie, czy w danym terminie jest dostępny pokój danego typu.                |
 | Zadania   | Znajdowanie wolnych pokoi zadanego typu w zadanym terminie.                                               |
 | Źródło    | INTP 002 Przedstawiciel zleceniodawcy                                                                     |
-| Priorytet | normalny
+| Priorytet | normalny                                                                                                  |
 
-| ISYS 002  | **API** |
-| --------- | ------- |
-| Opis      | API komunikujące się pomiędzy stroną rejestracji a stroną płatności za pokój w hotelu. |
-| Potrzeby  | Przekazywanie danych klienta pomiędzy stronami rejestracji i płatności. |
-| Zadania   | Przekazać kwotę, jaką należy zapłacić za pokoje.<br/> Przekazanie unikalnego kodu weryfikującego płatność. W razie niepowodzenia lub powodzenia płatności przekierowanie na stronę rezerwacji z odpowiednim komunikatem. |
-| Źródło    | INTP 002 Przedstawiciel zleceniodawcy |
-| Priorytet | Normalny |                                                                                                                      
+| ISYS 002  | API                                                                                                           |
+| --------- | ------------------------------------------------------------------------------------------------------------- |
+| Opis      | API komunikuje się z bazą danych i systemem płatności w celu umożliwienia użytkownikowi dokonania rezerwacji. |
+| Potrzeby  | Przekazywania danych klienta pomiędzy stronami rejestracji i płatności                                        |
+| Zadania   | Wyswietlić użytkownikowi listę dostępnych pokoi w wybranym terminie. <br/>Dostarczyć kod płatności<br/>       |
+| Źródło    | INTP 002 Przedstawiciel zleceniodawcy                                                                         |
+| Priorytet | normalny                                                                                                      |
+
+Pełna dokumentacja: [Dokumentacja REST API](https://github.com/michalStarski/RUP-hotel/blob/master/docs/Dokumentacja%20REST%20API.md)
 
 ## Przewidywane komponenty systemu
 
@@ -178,60 +180,88 @@
 | Źródło    | INTP 002 Przedstawiciel zleceniodawcy                                                                                                             |
 | Priorytet | normalny                                                                                                                                          |
 
-Szczegółowe wymagania dotyczące danych przetwarzanych w systemie znajdują się w dokumencie *Ogólny model informacyjny*
+Szczegółowe wymagania dotyczące danych przetwarzanych w systemie znajdują się w dokumencie [Ogólny model informacyjny](https://github.com/michalStarski/RUP-hotel/blob/master/docs/Og%C3%B3lny%20model%20informacyjny.md)
 
 ## Wymagania jakościowe
 
-- Dostosowana, prosta intuicyjna strona internetowa;
-
-- Niezawodny, stabilny i niezakłócony kontakt;
+- Niezawodny, stabilny i niezakłócony kontakt.
 
 - Bezbłędny zapis informacji do bazy danych oraz ich odczyt i wyświetlenie przez aplikację.
+
+## Wymagania niefunkcjonalne
+
+- Dostosowana, prosta intuicyjna strona internetowa.
+
+- System powinień być dostępny na różnych urządzeniach np. Smartphone.
+
+- System powinien być łatwy w opanowaniu dla ludzi z każdego przedziału wiekowego.
 
 ## Sytuacje wyjątkowe
 
 - Brak połączenia z bazą danych w momencie połączenia strony internetowej;
 
-- Chęć użytkownika do zarezerwowania zerowej ilości pokoi;
+  - Należy odświeżyc stronę.
 
-- Chęć użytkownika do zarezerwowania większej ilości pokoi niż jest wolnych w danym terminie w zasobach hotelu;
+- Niepodanie terminu rezerwacji;
 
-- Nie podanie terminu rezerwacji;
+  - Należy podać termin wyjazdu oraz przyjazdu.
 
 - Nie podanie wszystkich danych osobowych niezbędnych do przejścia przez proces rezerwacji;
 
-- Wybranie, przez klienta, późniejszego terminu zameldowania niż wymeldowania z pokoju przy rezerwacji
+  - Należy podać poprawne brakujące dane.
 
 ## Kryteria akceptacyjne
 
-| ACPT 001  | **Testy akceptacyjne u klienta – Strona internetowa.**                                    |
-| --------- | ----------------------------------------------------------------------------------------- |
-| Opis      | Sprawdzenie poprawności przekierowań i akcji wszystkich przycisków na stronie rezerwacji. |
-| Źródło    | INTP 002 Przedstawiciel zleceniodawcy                                                     |
-| Priorytet | normalny                                                                                  |
+| ACPT 001  | **Testy akceptacyjne u klienta – Poprawność przekierowań.** |
+| --------- | ----------------------------------------------------------- |
+| Opis      | Sprawdzenie poprawności przekierowań adresów.               |
+| Źródło    | INTP 002 Przedstawiciel zleceniodawcy                       |
+| Priorytet | normalny                                                    |
 
-| ACPT 002  | **Testy akceptacyjne u klienta – Niepoprawnie wykonana płatność.**                                           |
-| --------- | ------------------------------------------------------------------------------------------------------------ |
-| Opis      | Sprawdzenie, czy niepoprawna wykonana płatność przekierowuje do strony rezerwacji z odpowiednim komunikatem. |
-| Źródło    | INTP 002 Przedstawiciel zleceniodawcy                                                                        |
-| Priorytet | normalny                                                                                                     |
+| ACPT 002  | **Testy akceptacyjne u klienta – Poprawność działania formularza wyszukiwarki.** |
+| --------- | -------------------------------------------------------------------------------- |
+| Opis      | Sprawdzenie czy akcje każdego elementu formularza wyszukiwarki działa poprawnie. |
+| Źródło    | INTP 002 Przedstawiciel zleceniodawcy                                            |
+| Priorytet | normalny                                                                         |
 
-| ACPT 003  | **Testy akceptacyjne u klienta – Poprawnie wykonana płatność.**                                           |
-| --------- | --------------------------------------------------------------------------------------------------------- |
-| Opis      | Sprawdzenie czy poprawnie wykonana płatność przekierowuje do strony rezerwacji z odpowiednim komunikatem. |
-| Źródło    | INTP 002 Przedstawiciel zleceniodawcy                                                                     |
-| Priorytet | normalny                                                                                                  |
+| ACPT 003  | **Testy akceptacyjne u klienta – Poprawne wyświetlenie propozycji pokoi.** |
+| --------- | -------------------------------------------------------------------------- |
+| Opis      | Wyświetlenie wszystkich wolnych pokoi w danym terminie.                    |
+| Źródło    | INTP 002 Przedstawiciel zleceniodawcy                                      |
+| Priorytet | normalny                                                                   |
 
-| ACPT 004  | **Testy akceptacyjne u klienta – Sprawdzanie dostępności pokoi w terminie.**                                     |
-| --------- | ---------------------------------------------------------------------------------------------------------------- |
-| Opis      | Sprawdzenie czy, baza danych zwraca prawdziwe dane w kontekście określania czy dany pokój jest zajęty czy wolny. |
-| Źródło    | INTP 002 Przedstawiciel zleceniodawcy                                                                            |
-| Priorytet | normalny                                                                                                         |
+| ACPT 004  | **Testy akceptacyjne u klienta – Wyświetlenie komunikatu o braku pokoi.** |
+| --------- | ------------------------------------------------------------------------- |
+| Opis      | Wyświetlenie komunikatu o braku miejsc w wybranym terminie.               |
+| Źródło    | INTP 002 Przedstawiciel zleceniodawcy                                     |
+| Priorytet | normalny                                                                  |
 
-| ACPT 005  | **Testy akceptacyjne u klienta – Podpowiedzi na stronie.**                                                                                                                            |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Opis      | Sprawdzenie czy w przypadku zajętych pokoi o zadanym typie strona proponuje klientowi rezerwację kilku pokoi o łącznej sumie mieszkańców równej lub wyższej od zadanej przez klienta. |
-| Źródło    | INTP 002 Przedstawiciel zleceniodawcy                                                                                                                                                 |
-| Priorytet | normalny                                                                                                                                                                              |
+| ACPT 005  | **Testy akceptacyjne u klienta – Poprawność działania formularza osobowego.** |
+| --------- | ----------------------------------------------------------------------------- |
+| Opis      | Sprawdzenie czy akcje każdego elementu formularza osobowego działa poprawnie. |
+| Źródło    | INTP 002 Przedstawiciel zleceniodawcy                                         |
+| Priorytet | normalny                                                                      |
 
-Szczegółowe wymagania dotyczące danych przetwarzanych w systemie znajdują się w dokumencie *Plan testów*
+| ACPT 006  | Testy akceptacyjne u klienta – Poprawność generowania kodu płatności. |
+| --------- | --------------------------------------------------------------------- |
+| Opis      | Sprawdzenie czy generowany kod jest zgodny z ustalonymi wymaganiami.  |
+| Źródło    | INTP 002 Przedstawiciel zleceniodawcy                                 |
+| Priorytet | normalny                                                              |
+
+| ACPT 007  | Testy akceptacyjne u klienta – Transakcja zaakceptowana.                                                |
+| --------- | ------------------------------------------------------------------------------------------------------- |
+| Opis      | Przekierowanie na strone z formularzem wyszukiwarki wraz z odpowiednim komunikatem po udanej płatności. |
+| Źródło    | INTP 002 Przedstawiciel zleceniodawcy                                                                   |
+| Priorytet | normalny                                                                                                |
+
+| ACPT 008  | Testy akceptacyjne u klienta – Transakcja odrzucona.                                                       |
+| --------- | ---------------------------------------------------------------------------------------------------------- |
+| Opis      | Przekierowanie na strone z formularzem wyszukiwarki wraz z odpowiednim komunikatem po nieudanej płatności. |
+| Źródło    | INTP 002 Przedstawiciel zleceniodawcy                                                                      |
+| Priorytet | normalny                                                                                                   |
+
+| ACPT 009  | Testy akceptacyjne u klienta – Poprawne przejście do zewnętrznego systemu płatności.                                                   |
+| --------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| Opis      | Sprawdzenie czy po naciśnięciu przycisku "Przejdź dalej" w formularzu osobowym zostaniemy przekierowani na strone systemu RUPłatności. |
+| Źródło    | INTP 002 Przedstawiciel zleceniodawcy                                                                                                  |
+| Priorytet | normalny                                                                                                                               |
