@@ -34,19 +34,19 @@ Podrecznik użytkownika ma stanowić pomoc dla nowych użytkowników Systemu Rez
 
 ![5c1a09159d4a7](https://i.loli.net/2018/12/19/5c1a09159d4a7.png)
 
-+ **Miejsce wyboru daty zameldowania oraz wymeldowania.** Po kliknięciu w to pole użytkownikowi ukaże się kalendarz ułatwiający wybór daty zameldowania jak i wymeldowania. Użytkownik może wybrać odpowiadający sobie dzień, miesiąc oraz rok. Pole zostanie automatycznie wpisane po kliknięciu odpowiedniego dnia. Strzałki widoczne w górnej części kalendarza pozwalają nawigwać pomiędzy miesiacami. Rozwijana lista w górnej części również umożliwia przemieszczanie się między miesiącami z uwzględenieniem roku.
++ **Miejsce wyboru daty zameldowania oraz wymeldowania.** Po kliknięciu w to pole użytkownikowi ukaże się kalendarz ułatwiający wybór daty zameldowania jak i wymeldowania. Użytkownik może wybrać odpowiadający sobie dzień, miesiąc oraz rok. Pole zostanie automatycznie wpisane po kliknięciu odpowiedniego dnia. Strzałki widoczne w górnej części kalendarza pozwalają nawigwać pomiędzy miesiącami. Rozwijana lista w górnej części również umożliwia przemieszczanie się pomiędzy miesiącami.
 
 ![5c10df2ab61f2](https://i.loli.net/2018/12/12/5c10df2ab61f2.png)
 
-+ **Miejsce wyboru liczby osób.** Wybór ilości osób. Po kliknięciu użytkownikowi wyświetli się lista z możliwością wyboru 1-10 osób, dla których mają być zarezerwowane pokoje. Należy wybrać odpowiednią liczbę odpowiadającą ilości miejsc jakie użytkownik chce zarezerwować.
++ **Miejsce wyboru liczby osób.** Po kliknięciu użytkownikowi wyświetli się lista z możliwością wyboru 1-10 osób, dla których mają być zarezerwowane pokoje. Należy wybrać odpowiednią liczbę odpowiadającą ilości miejsc jakie użytkownik chce zarezerwować.
 
 ![5c10e0efa4824](https://i.loli.net/2018/12/12/5c10e0efa4824.png)
 
-+ **Przycisk "Szukaj".** Aktualizuje listę propozycji jakie przygotował System. Należy go kliknąć gdy wszystkie pola (tj. termin oraz ilość miejsc) zostaną wprowadzone. Zaktualizuje się wtedy lista propozycji jakie system przygotował dla użytkownika. 
++ **Przycisk "Szukaj".** Aktualizuje listę propozycji jakie przygotował System. Należy go kliknąć gdy wszystkie pola (tj. termin oraz ilość miejsc) zostaną wprowadzone. Pojawi się wtedy lista propozycji jakie system przygotował dla użytkownika. 
 
 ![5c182bf398321](https://i.loli.net/2018/12/18/5c182bf398321.png)
 
-+ **Lista propozycji, które, zdaniem systemu, najlepiej dostosują sie do potrzeb użytkownika.**  Pojawi się po naciśnięciu przycisku "Szukaj" (patrsz punkt 3). Kliknięcie w odpowiednią propozycję spowoduje zaznaczenie jej jako swojego wyboru i podświetlenie wybranej opcji. Użytkownik może dokonać wyboru kilku opcji. Jest to równoznaczne z wyrażeniem chęci zarezerwowania wszystkich wybranych w ten sposób pokoi.
++ **Lista propozycji, które, zdaniem systemu, najlepiej dostosują sie do potrzeb użytkownika.**  Pojawi się po naciśnięciu przycisku "Szukaj" (patrz punkt 3). Kliknięcie w odpowiednią propozycję spowoduje zaznaczenie jej jako swojego wyboru i podświetlenie wybranej opcji. Użytkownik może dokonać wyboru kilku opcji. Jest to równoznaczne z wyrażeniem chęci zarezerwowania wszystkich wybranych w ten sposób pokoi.
 
 ![5c1a09ab30f16](https://i.loli.net/2018/12/19/5c1a09ab30f16.png)
 
